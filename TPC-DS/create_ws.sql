@@ -38,3 +38,4 @@ ENGINE = MergeTree()
 PARTITION BY (ws_warehouse_sk)
 ORDER BY (ws_sold_date_sk)
 SETTINGS index_granularity = 8192 
+SETTINGS storage_policy = 'only_local'

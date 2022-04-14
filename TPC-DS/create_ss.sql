@@ -27,3 +27,4 @@ ENGINE = MergeTree()
 PARTITION BY (ss_store_sk)
 ORDER BY (ss_sold_date_sk)
 SETTINGS index_granularity = 8192
+SETTINGS storage_policy = 'only_local'

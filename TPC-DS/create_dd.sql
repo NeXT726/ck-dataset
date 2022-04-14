@@ -33,3 +33,4 @@ ENGINE = MergeTree()
 PARTITION BY (d_date_sk)
 ORDER BY (d_date_id)
 SETTINGS index_granularity = 8192
+SETTINGS storage_policy = 'only_local'
