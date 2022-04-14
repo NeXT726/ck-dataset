@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sf=10
-LOAD_DIR=/mnt/disk1/data/ssb-$sf
+LOAD_DIR=/mnt/disk1/data/ssb/ssb-$sf
 CREATE_DIR=load/single/single_in_$1
 ip=10.10.1.32
 port=9000
