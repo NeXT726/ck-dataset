@@ -1,1 +1,1 @@
-for sql in /home/jianglind/ck-dataset/TPC-DS/create_*.sql; do cat &sql | clickhouse-client; done
+for sql in /home/jianglind/ck-dataset/TPC-DS/create_*.sql; do cat $sql | clickhouse-client; done
