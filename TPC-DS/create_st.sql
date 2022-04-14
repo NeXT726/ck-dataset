@@ -29,7 +29,7 @@ CREATE TABLE store (
         s_gmt_offset Float,
         s_tax_percentage Float
 )
-ENGINE = MergeTree()
+ENGINE = MergeTree
 PARTITION BY tuple()
 ORDER BY tuple()
 SETTINGS index_granularity = 8192

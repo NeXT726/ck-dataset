@@ -29,7 +29,7 @@ CREATE TABLE date_dim
     d_current_quarter String, 
     d_current_year String
 )
-ENGINE = MergeTree()
+ENGINE = MergeTree
 PARTITION BY (d_date_sk)
 ORDER BY (d_date_id)
 SETTINGS index_granularity = 8192

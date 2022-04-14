@@ -19,7 +19,7 @@ CREATE TABLE customer
     `c_email_address` String, 
     `c_last_review_date` Int8
 )
-ENGINE = MergeTree()
+ENGINE = MergeTree
 PARTITION BY c_birth_country
 ORDER BY c_first_sales_date_sk
 SETTINGS index_granularity = 8192

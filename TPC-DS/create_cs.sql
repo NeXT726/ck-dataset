@@ -33,5 +33,5 @@ CREATE TABLE catalog_sales (
 `cs_net_paid_inc_ship` Float,
 `cs_net_paid_inc_ship_tax` Float, 
 `cs_net_profit` Float) 
-ENGINE = MergeTree() PARTITION BY (cs_sold_date_sk) ORDER BY (cs_sold_time_sk) SETTINGS index_granularity = 8192
+ENGINE = MergeTree PARTITION BY (cs_sold_date_sk) ORDER BY (cs_sold_time_sk) SETTINGS index_granularity = 8192
 SETTINGS storage_policy = 'only_local'

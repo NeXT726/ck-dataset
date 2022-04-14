@@ -23,7 +23,7 @@ CREATE TABLE store_sales (
     ss_net_paid_inc_tax Float,
     ss_net_profit Float
 )
-ENGINE = MergeTree()
+ENGINE = MergeTree
 PARTITION BY (ss_store_sk)
 ORDER BY (ss_sold_date_sk)
 SETTINGS index_granularity = 8192

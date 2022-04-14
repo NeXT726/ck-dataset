@@ -6,7 +6,7 @@ CREATE TABLE household_demographics
     `hd_dep_count` Int8, 
     `hd_vehicle_count` Int8
 )
-ENGINE = MergeTree()
+ENGINE = MergeTree
 PARTITION BY tuple()
 ORDER BY tuple()
 SETTINGS index_granularity = 8192

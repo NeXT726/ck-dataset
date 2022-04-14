@@ -34,7 +34,7 @@ CREATE TABLE web_sales (
     ws_net_paid_inc_ship_tax Float,
     ws_net_profit Float
 )
-ENGINE = MergeTree()
+ENGINE = MergeTree
 PARTITION BY (ws_warehouse_sk)
 ORDER BY (ws_sold_date_sk)
 SETTINGS index_granularity = 8192 

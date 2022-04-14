@@ -23,7 +23,7 @@ CREATE TABLE item
     `i_manager_id` Int8, 
     `i_product_name` String
 )
-ENGINE = MergeTree()
+ENGINE = MergeTree
 PARTITION BY (i_item_sk)
 ORDER BY (i_item_id)
 SETTINGS index_granularity = 8192
