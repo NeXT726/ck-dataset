@@ -1,0 +1,1 @@
+for sql in create_*.sql; do cat &sql | clickhouse-client; done
