@@ -26,5 +26,4 @@ CREATE TABLE item
 ENGINE = MergeTree
 PARTITION BY (i_item_sk)
 ORDER BY (i_item_id)
-SETTINGS index_granularity = 8192
 SETTINGS storage_policy = 'only_local'

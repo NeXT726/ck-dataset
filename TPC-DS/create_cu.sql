@@ -22,5 +22,4 @@ CREATE TABLE customer
 ENGINE = MergeTree
 PARTITION BY c_birth_country
 ORDER BY c_first_sales_date_sk
-SETTINGS index_granularity = 8192
 SETTINGS storage_policy = 'only_local'

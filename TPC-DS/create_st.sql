@@ -32,5 +32,4 @@ CREATE TABLE store (
 ENGINE = MergeTree
 PARTITION BY tuple()
 ORDER BY tuple()
-SETTINGS index_granularity = 8192
 SETTINGS storage_policy = 'only_local'
