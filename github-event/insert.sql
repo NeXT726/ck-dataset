@@ -1,0 +1,1 @@
+INSERT INTO github_events SELECT * FROM github_events_url
