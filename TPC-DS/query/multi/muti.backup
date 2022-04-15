@@ -243,6 +243,9 @@ select sum (ss_quantity)
  ;
  
 9、
+//query41
+//需要将 item i1放在where子句中
+//在ck中定义的别名对子句以及子句之间是不可见的，因此我们想定义别名时需要在子句内部定义别名
 select distinct(i_product_name)
  from item i1
  where i_manufact_id between 761 and 761+40 
