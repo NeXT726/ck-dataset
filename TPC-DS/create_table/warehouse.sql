@@ -1,4 +1,4 @@
-create table warehouse
+CREATE TABLE warehouse
 (
     w_warehouse_sk            Int8,
     w_warehouse_id            String,
@@ -13,10 +13,9 @@ create table warehouse
     w_state                   String,
     w_zip                     String,
     w_country                 String,
-    w_gmt_offset              Float,
-    primary key (w_warehouse_sk)
+    w_gmt_offset              Float
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY w_warehouse_sk
+ORDER BY w_warehouse_id 
 SETTINGS storage_policy = 'only_local'

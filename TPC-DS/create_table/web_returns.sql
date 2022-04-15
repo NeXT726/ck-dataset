@@ -1,4 +1,4 @@
-create table web_returns
+CREATE TABLE web_returns
 (
     wr_returned_date_sk       Int8,
     wr_returned_time_sk       Int8,
@@ -23,10 +23,9 @@ create table web_returns
     wr_refunded_cash          Float,
     wr_reversed_charge        Float,
     wr_account_credit         Float,
-    wr_net_loss               Float,
-    primary key (wr_item_sk, wr_order_number)
+    wr_net_loss               Float
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY wr_item_sk
+ORDER BY wr_order_number 
 SETTINGS storage_policy = 'only_local'

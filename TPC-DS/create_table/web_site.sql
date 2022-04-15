@@ -1,4 +1,4 @@
-create table web_site
+CREATE TABLE web_site
 (
     web_site_sk               Int8,
     web_site_id               String,
@@ -25,10 +25,9 @@ create table web_site
     web_zip                   String,
     web_country               String,
     web_gmt_offset            Float,
-    web_tax_percentage        Float,
-    primary key (web_site_sk)
+    web_tax_percentage        Float
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY web_site_sk
+ORDER BY web_site_id 
 SETTINGS storage_policy = 'only_local'

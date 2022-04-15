@@ -1,4 +1,4 @@
-create table store_returns
+CREATE TABLE store_returns
 (
     sr_returned_date_sk       Int8,
     sr_return_time_sk         Int8,
@@ -19,10 +19,9 @@ create table store_returns
     sr_refunded_cash          Float,
     sr_reversed_charge        Float,
     sr_store_credit           Float,
-    sr_net_loss               Float,
-    primary key (sr_item_sk, sr_ticket_number)
+    sr_net_loss               Float
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY sr_item_sk
+ORDER BY sr_ticket_number
 SETTINGS storage_policy = 'only_local'

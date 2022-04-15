@@ -1,4 +1,4 @@
-create table time_dim
+CREATE TABLE time_dim
 (
     t_time_sk                 Int8,
     t_time_id                 String,
@@ -9,10 +9,9 @@ create table time_dim
     t_am_pm                   String,
     t_shift                   String,
     t_sub_shift               String,
-    t_meal_time               String,
-    primary key (t_time_sk)
+    t_meal_time               String
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY t_time_sk
+ORDER BY t_time_id
 SETTINGS storage_policy = 'only_local'

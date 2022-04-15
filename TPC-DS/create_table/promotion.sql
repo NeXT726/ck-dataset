@@ -1,4 +1,4 @@
-create table promotion
+CREATE TABLE promotion
 (
     p_promo_sk                Int8,
     p_promo_id                String,
@@ -18,10 +18,9 @@ create table promotion
     p_channel_demo            String,
     p_channel_details         String,
     p_purpose                 String,
-    p_discount_active         String,
-    primary key (p_promo_sk)
+    p_discount_active         String
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY p_promo_sk
+ORDER BY p_promo_id
 SETTINGS storage_policy = 'only_local'

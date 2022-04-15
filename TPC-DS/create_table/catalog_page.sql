@@ -1,4 +1,4 @@
-create table catalog_page
+CREATE TABLE catalog_page
 (
     cp_catalog_page_sk        Int8,
     cp_catalog_page_id        String,
@@ -8,7 +8,7 @@ create table catalog_page
     cp_catalog_number         Int8,
     cp_catalog_page_number    Int8,
     cp_description            String,
-    cp_type                   String,
+    cp_type                   String
 )
 ENGINE = MergeTree 
 PARTITION BY cp_catalog_page_sk

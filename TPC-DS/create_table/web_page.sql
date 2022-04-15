@@ -1,4 +1,4 @@
-create table web_page
+CREATE TABLE web_page
 (
     wp_web_page_sk            Int8,
     wp_web_page_id            String,
@@ -13,10 +13,9 @@ create table web_page
     wp_char_count             Int8,
     wp_link_count             Int8,
     wp_image_count            Int8,
-    wp_max_ad_count           Int8,
-    primary key (wp_web_page_sk)
+    wp_max_ad_count           Int8
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY wp_web_page_sk
+ORDER BY wp_web_page_id 
 SETTINGS storage_policy = 'only_local'

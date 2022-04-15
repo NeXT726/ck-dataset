@@ -1,11 +1,10 @@
-create table income_band
+CREATE TABLE income_band
 (
     ib_income_band_sk         Int8,
     ib_lower_bound            Int8,
-    ib_upper_bound            Int8,
-    primary key (ib_income_band_sk)
+    ib_upper_bound            Int8
 )
 ENGINE = MergeTree 
-PARTITION BY toYYYYMM(cc_rec_start_date) 
-ORDER BY cc_call_center_sk 
+PARTITION BY ib_income_band_sk
+ORDER BY ib_income_band_sk 
 SETTINGS storage_policy = 'only_local'
