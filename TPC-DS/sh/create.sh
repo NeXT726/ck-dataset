@@ -7,5 +7,5 @@ do
     cat ../create_table/$line.sql | clickhouse-client
 done < ../create_table/table.lst
 
-echo "databases:"
-clickhouse-client --query="show databases"
+echo "CK tables:"
+clickhouse-client --query="show tables"

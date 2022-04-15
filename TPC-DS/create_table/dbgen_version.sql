@@ -1,4 +1,4 @@
-CREATE TABLE customer
+CREATE TABLE dbgen_version
 (
     dv_version  String,
     dv_create_date  Date,
