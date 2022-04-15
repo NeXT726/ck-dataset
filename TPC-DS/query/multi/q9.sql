@@ -1,3 +1,7 @@
+-- query41
+-- 需要将 item i1放在where子句中
+-- 在ck中定义的别名对子句以及子句之间是不可见的，因此我们想定义别名时需要在子句内部定义别名
+
 SELECT DISTINCT i_product_name
 FROM item
 WHERE ((i_manufact_id >= 761) AND (i_manufact_id <= (761 + 40))) AND ((
