@@ -7,4 +7,5 @@ clickhouse-client --query="DROP TABLE IF EXISTS item"
 clickhouse-client --query="DROP TABLE IF EXISTS store_sales"
 clickhouse-client --query="DROP TABLE IF EXISTS store"
 clickhouse-client --query="DROP TABLE IF EXISTS web_sales"
-for sql in /home/jianglind/ck-dataset/TPC-DS/create_*.sql; do cat $sql | clickhouse-client; done
+
+for sql in ../create_table/create_*.sql; do cat $sql | clickhouse-client; done

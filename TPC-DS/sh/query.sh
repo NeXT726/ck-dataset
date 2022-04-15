@@ -1,0 +1,1 @@
+for sql in ../query/multi/*.sql; do echo("query $sql") && time(cat $sql | clickhouse-client); done
