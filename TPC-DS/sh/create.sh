@@ -9,4 +9,4 @@ clickhouse-client --query="DROP TABLE IF EXISTS store"
 clickhouse-client --query="DROP TABLE IF EXISTS web_sales"
 clickhouse-client --query="DROP TABLE IF EXISTS customer_demographics"
 
-for sql in ../create_table/create_*.sql; do cat $sql | clickhouse-client; done
+for sql in ../create_table/*.sql; do cat $sql | clickhouse-client; done
