@@ -6,5 +6,6 @@ do /home/jianglind/tpcds-kit/tools/dsqgen \
     -DIALECT sqlserver \
     -OUTPUT_DIR /mnt/disk1/data/tpc-ds/sql \
     -TEMPLATE "query${i}.tpl" \
-    -SCALE 10
+    -SCALE 10 \
+    -DISTRIBUTIONS /home/jianglind/tpcds-kit/tools/tpcds.idx
 done
