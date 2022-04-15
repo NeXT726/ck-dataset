@@ -2,7 +2,7 @@ CREATE TABLE date_dim
 (
     d_date_sk Int8, 
     d_date_id String, 
-    d_date Int8, 
+    d_date Date, 
     d_month_seq Int8, 
     d_week_seq Int8, 
     d_quarter_seg Int8, 
