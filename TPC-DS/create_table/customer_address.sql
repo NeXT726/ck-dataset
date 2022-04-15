@@ -12,7 +12,7 @@ CREATE TABLE customer_address
     ca_zip  String,
     ca_country  String,
     ca_gmt_offset   Float,
-    ca_location_type    String,
+    ca_location_type    String
 )
 ENGINE = MergeTree
 PARTITION BY ca_address_sk
