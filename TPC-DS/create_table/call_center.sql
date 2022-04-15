@@ -32,5 +32,7 @@ CREATE TABLE call_center
 `cc_gmt_offset` Float,
 `cc_tax_percentage` Float
 ) 
-ENGINE = MergeTree PARTITION BY toYYYYMM(cc_rec_start_date) ORDER BY cc_call_center_sk 
+ENGINE = MergeTree 
+PARTITION BY toYYYYMM(cc_rec_start_date) 
+ORDER BY cc_call_center_sk 
 SETTINGS storage_policy = 'only_local'

@@ -1,0 +1,7 @@
+varchar(n) -- String
+date -- Date
+time -- String
+integer  -- Int8
+char(n) -- String
+decimal(5,2) -- Float
+decimal(7,2) -- Float

@@ -1,5 +1,5 @@
 CREATE TABLE store (
-        s_store_sk Int8 ,
+        s_store_sk Int8,
         s_store_id String,
         s_rec_start_date date,
         s_rec_end_date date,
