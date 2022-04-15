@@ -15,5 +15,6 @@ CREATE TABLE customer_address
     ca_location_type    String,
 )
 ENGINE = MergeTree
-ORDER BY ca_address_sk
+PARTITION BY ca_address_sk
+ORDER BY ca_address_id
 SETTINGS storage_policy = 'only_local'
