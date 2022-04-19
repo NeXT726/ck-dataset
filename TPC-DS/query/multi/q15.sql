@@ -39,4 +39,4 @@ ORDER BY
     s_state ASC,
     s_zip ASC
 LIMIT 10
-SETTINGS max_memory_usage = 0
+SETTINGS max_memory_usage = 10000000000, max_bytes_before_external_sort=5000000000
