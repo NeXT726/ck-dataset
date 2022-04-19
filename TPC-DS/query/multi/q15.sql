@@ -39,3 +39,4 @@ ORDER BY
     s_state ASC,
     s_zip ASC
 LIMIT 10
+SETTINGS max_memory_usage = 0
