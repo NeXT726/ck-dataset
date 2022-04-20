@@ -1,3 +1,10 @@
+/*
+报错Memory limit (for query) exceeded
+设置
+set max_memory_usage = 10000000000
+set max_bytes_before_external_sort=5000000000
+依旧不行，还是报错
+*/
 SELECT
     s_store_name,
     s_company_id,
@@ -39,4 +46,3 @@ ORDER BY
     s_state ASC,
     s_zip ASC
 LIMIT 10
-SETTINGS max_memory_usage = 10000000000, max_bytes_before_external_sort=5000000000
