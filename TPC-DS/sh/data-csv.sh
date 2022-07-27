@@ -1,1 +1,1 @@
-time(for file in /mnt/disk1/data/tpc-ds/data-$1/*.dat ; do mv "$file" "${file%.*}.csv" ; done)
+for file in /mnt/disk1/data/tpc-ds/data-$1/*.dat ; do mv "$file" "${file%.*}.csv" ; done
