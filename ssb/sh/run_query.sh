@@ -3,7 +3,7 @@
 #运行sh run_query.sh 2>result.txt
 QUERY_DIR=query/$1
 RESULT_DIR=result
-ip=10.10.1.32
+ip=127.0.0.1
 port=9000
 
 date 1>&2 && time cat $QUERY_DIR/Q1_1.sql | clickhouse-client -h $ip --port $port

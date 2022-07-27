@@ -2,7 +2,7 @@ sf=10
 LOAD_DIR=/mnt/disk1/data/ssb/ssb-$sf
 #$1为第一个传参，从local、s3、seaweed、seaweed_s3中选
 CREATE_DIR=load/single/single_in_$1
-ip=10.10.1.32
+ip=127.0.0.1
 port=9000
 
 echo 'drop table customer/part/supplier/lineorder'

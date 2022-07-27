@@ -1,0 +1,12 @@
+Fri 20 May 2022 05:08:36 PM CST
+0.18user 0.07system 0:00.37elapsed 68%CPU (0avgtext+0avgdata 200656maxresident)k
+64184inputs+0outputs (0major+35423minor)pagefaults 0swaps
+Fri 20 May 2022 05:08:36 PM CST
+0.46user 0.16system 0:00.69elapsed 91%CPU (0avgtext+0avgdata 240988maxresident)k
+156424inputs+0outputs (0major+72728minor)pagefaults 0swaps
+Fri 20 May 2022 05:08:37 PM CST
+0.03user 0.00system 0:00.06elapsed 67%CPU (0avgtext+0avgdata 92472maxresident)k
+3768inputs+0outputs (0major+6883minor)pagefaults 0swaps
+Fri 20 May 2022 05:08:37 PM CST
+75.59user 2.58system 0:43.66elapsed 179%CPU (0avgtext+0avgdata 312716maxresident)k
+361112inputs+0outputs (10major+184455minor)pagefaults 0swaps
