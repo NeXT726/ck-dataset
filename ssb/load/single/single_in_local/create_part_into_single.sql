@@ -1,14 +1,14 @@
 CREATE TABLE part 
 (
- P_PARTKEY       UInt32,
- P_NAME          String,
- P_MFGR          String,
- P_CATEGORY      String,
- P_BRAND         String,
- P_COLOR         String,
- P_TYPE          String,
- P_SIZE          UInt8,
- P_CONTAINER     String
+ p_partkey       UInt32,
+ p_name          String,
+ p_mfgr          String,
+ p_category      String,
+ p_brand         String,
+ p_color         String,
+ p_type          String,
+ p_size          UInt8,
+ p_container     String
 )
-ENGINE = MergeTree ORDER BY P_PARTKEY
+ENGINE = MergeTree ORDER BY p_partkey
 SETTINGS storage_policy = 'only_local'

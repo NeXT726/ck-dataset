@@ -1,22 +1,22 @@
 CREATE TABLE lineorder
 (
- LO_ORDERKEY            UInt32,
- LO_LINENUMBER          UInt8,
- LO_CUSTKEY       	    UInt32,
- LO_PARTKEY             UInt32,
- LO_SUPPKEY             UInt32,
- LO_ORDERDATE           Date,
- LO_ORDERPRIORITY       String,
- LO_SHIPPRIORITY        UInt8,
- LO_QUANTITY            UInt8,
- LO_EXTENDEDPRICE       UInt32,
- LO_ORDTOTALPRICE       UInt32,
- LO_DISCOUNT            UInt8,
- LO_REVENUE             UInt32,
- LO_SUPPLYCOST          UInt32,
- LO_TAX                 UInt8,
- LO_COMMITDATE          Date,
- LO_SHIPMODE            String
+ lo_orderkey            UInt32,
+ lo_linenumber          UInt8,
+ lo_custkey       	    UInt32,
+ lo_partkey             UInt32,
+ lo_suppkey             UInt32,
+ lo_orderdate           Date,
+ lo_orderpriority       String,
+ lo_shippriority        UInt8,
+ lo_quantity            UInt8,
+ lo_extendedprice       UInt32,
+ lo_ordtotalprice       UInt32,
+ lo_discount            UInt8,
+ lo_revenue             UInt32,
+ lo_supplycost          UInt32,
+ lo_tax                 UInt8,
+ lo_commitdate          Date,
+ lo_shipmode            String
 )
-ENGINE = MergeTree PARTITION BY toYear(LO_ORDERDATE) ORDER BY (LO_ORDERDATE, LO_ORDERKEY)
+ENGINE = MergeTree PARTITION BY toYear(lo_orderdate) ORDER BY (lo_orderdate, lo_orderkey)
 SETTINGS storage_policy = 'only_local'
