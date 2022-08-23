@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sf=10
 LOAD_DIR=/mnt/cfs/data/ssb/ssb-$sf
 #$1为第一个传参，从local、s3、seaweed、seaweed_s3中选
