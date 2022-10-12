@@ -1,7 +1,7 @@
-#!/bin/bash
+#! /bin/bash
 
 #运行sh run_query.sh 2>result.txt
-QUERY_DIR=query/$1
+QUERY_DIR=../query/single
 RESULT_DIR=result
 ip=127.0.0.1
 port=9000
@@ -19,3 +19,5 @@ date 1>&2 && time cat $QUERY_DIR/Q3_4.sql | clickhouse-client -h $ip --port $por
 date 1>&2 && time cat $QUERY_DIR/Q4_1.sql | clickhouse-client -h $ip --port $port
 date 1>&2 && time cat $QUERY_DIR/Q4_2.sql | clickhouse-client -h $ip --port $port
 date 1>&2 && time cat $QUERY_DIR/Q4_3.sql | clickhouse-client -h $ip --port $port
+
+cp /var/log/clickhouse-server/clickhouse-server.log ./read-s3.log
