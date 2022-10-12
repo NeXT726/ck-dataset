@@ -1,13 +1,13 @@
 CREATE TABLE customer                                                                                                       
 (                                                                                                                                         
- C_CUSTKEY      	UInt32,                                                                                                                   
- C_NAME           	String,                                                                                                                   
- C_ADDRESS      	String,                                                                                                                   
- C_CITY             String,                                                                                                                   
- C_NATION       	String,                                                                                                                   
- C_REGION        	String,                                                                                                                   
- C_PHONE         	String,                                                                                                                   
- C_MKTSEGMENT    	String                                                                                                                    
+ c_custkey      	UInt32,                                                                                                                   
+ c_name           	String,                                                                                                                   
+ c_address      	String,                                                                                                                   
+ c_city             String,                                                                                                                   
+ c_nation       	String,                                                                                                                   
+ c_region        	String,                                                                                                                   
+ c_phone         	String,                                                                                                                   
+ c_mktsegment    	String                                                                                                                    
 )                                                                                                                                  
-ENGINE = MergeTree ORDER BY (C_CUSTKEY)
+ENGINE = MergeTree ORDER BY (c_custkey)
 SETTINGS storage_policy = 'only_s3'

@@ -2,7 +2,10 @@
 
 clickhouse-client --query="SYSTEM DROP FILESYSTEM CACHE"
 
+echo 3 > /proc/sys/vm/drop_caches
+
 for file in sql/*
 do 
-    echo "$file:" && clickhouse-client --time --queries-file=$file
+    RES=$(clickhouse-client --time --format=Null --queries-file=$file 2>&1)
+    echo "$file:$RES"
 done

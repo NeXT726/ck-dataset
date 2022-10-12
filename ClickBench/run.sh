@@ -1,5 +1,9 @@
 #!/bin/bash
 
+clickhouse-client --query="SYSTEM DROP FILESYSTEM CACHE"
+
+echo 3 > /proc/sys/vm/drop_caches
+
 TRIES=3
 QUERY_NUM=1
 cat queries.sql | while read query; do

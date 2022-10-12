@@ -1,12 +1,12 @@
 CREATE TABLE supplier
 (
- S_SUPPKEY       UInt32,
- S_NAME          String,
- S_ADDRESS       String,
- S_CITY          String,
- S_NATION        String,
- S_REGION        String,
- S_PHONE         String
+ s_suppkey       UInt32,
+ s_name          String,
+ s_address       String,
+ s_city          String,
+ s_nation        String,
+ s_region        String,
+ s_phone         String
  )
-ENGINE = MergeTree ORDER BY S_SUPPKEY
+ENGINE = MergeTree ORDER BY s_suppkey
 SETTINGS storage_policy = 'only_s3'
