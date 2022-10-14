@@ -2,7 +2,9 @@
 
 clickhouse-client --query="SYSTEM DROP FILESYSTEM CACHE"
 
-echo 3 > /proc/sys/vm/drop_caches
+rm -rf /mnt/gp3-800/ck-cache/*
+rm -rf /mnt/nvme/ck-cache/*
+rm -rf /mnt/ck-cache/*
 
 TRIES=3
 QUERY_NUM=1

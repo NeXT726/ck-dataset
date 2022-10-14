@@ -1,0 +1,24 @@
+load customer
+Fri Oct 14 11:07:09 CST 2022
+
+real	0m2.949s
+user	0m1.894s
+sys	0m0.229s
+load part
+Fri Oct 14 11:07:12 CST 2022
+
+real	0m1.355s
+user	0m0.924s
+sys	0m0.125s
+load supplier
+Fri Oct 14 11:07:14 CST 2022
+
+real	0m0.403s
+user	0m0.123s
+sys	0m0.054s
+load lineorder
+Fri Oct 14 11:07:14 CST 2022
+
+real	6m35.218s
+user	10m49.313s
+sys	0m57.824s
